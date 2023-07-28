@@ -41,14 +41,15 @@ tableEl.addEventListener("click", (event) => {
 ```
 이렇게 작성을 했더니, 제가 원하던대로 작동을 하지 않았습니다.<br/>
 이렇게 작성을 하게 되면 JS 파일을 읽어내려가는 순간 익명 화살표함수가 실행되기 때문 이었습니다.<br/>
-그래서 **어떻게 하면 `event객체`말고 다른 argument(`moleEls[randomNum]`)를 `Event Handler`에 넘길 수 있을까?** 를 고민했습니다.<br/>
+그래서<br/>
+**_<u>어떻게 하면 `event객체`말고 다른 argument(`moleEls[randomNum]`)를 `Event Handler`에 넘길 수 있을까?</u>_** 를 고민했습니다.<br/>
 <br/>
 그래서 떠오른 방법은 `Event Handler`를 `moleEls[randomNum]`가 선언된 `렉시컬 환경`에 구현을 하는 방법이었습니다.<br/>
 그렇게 하면 `closure`를 이용하여 `Event Handler`에서 `moleEls[randomNum]`를 인자로 넘겨주지 않아도 사용이 가능하기 때문입니다.<br/>
 <br/>
 그러나, 함수 내부에 다른 함수를 계속 작성하는 방법으로 구현을 하고싶지 않았고 하나의 독립적인 `Event Handler`를 선언을 하고싶었습니다.<br/>
 그래서 결국 `moleEls[randomNum]`를 넘겨주는 방식이 아닌,<br/>
-`Event Handler`에서 **`moleEls[randomNum]`이 다루는 태그와 동일한 태그**를 `querySelector`를 통해서 가져온 후 처리하는 방식으로 구현했습니다.
+`Event Handler`에서 **_`moleEls[randomNum]`이 다루는 태그와 동일한 태그_**를 `querySelector`를 통해서 가져온 후 처리하는 방식으로 구현했습니다.
 
 ```javascript
 function catchMole(event) {
