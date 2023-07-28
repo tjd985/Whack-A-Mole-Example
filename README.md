@@ -26,14 +26,16 @@ vanilla JS로 구현한 두더지잡기 게임
 <img src="https://img.shields.io/badge/JavaScript-gray?style=flat&logo=JavaScript&logoColor=F7DF1E"/>
 <br/><br/><br/>
 
-3. 기능
+# 4. 기능
 
 <br/><br/><br/>
 
-4. 어려웠던 점
+# 5. 어려웠던 점
 addEventListener메서드를 사용할때 이벤트 핸들러 함수에 event객체와, moleEls[randomNum]을 인자로 넘기고 싶어서 빈 익명 함수의 콜백함수로 이벤트 핸들러 함수를 넣어주었던 것이 화근이 되었음.
 ```javascript
-tableEl.addEventListener("click", (event) => {catchMole(event, moleEls[randomNum])});
+tableEl.addEventListener("click", (event) => {
+    catchMole(event, moleEls[randomNum])
+});
 ```
 이렇게 작성을 했더니, 내가 원하던대로 작동을 하지 않았음.
 이러면 JS 파일을 읽어내려가는 순간 익명 화살표함수가 실행되기 때문 이었음.
