@@ -1,8 +1,8 @@
 # Whack-A-Mole
-- 게임 시작
+### - 게임 시작
 ![start-whack-a-mole](https://github.com/tjd985/Whack-A-Mole-Example/assets/48385389/f85369f6-be0d-453d-94b9-ee6d2f66d75c)
 
-- 게임 재시작
+### - 게임 재시작
 ![restart-whack-a-mole](https://github.com/tjd985/Whack-A-Mole-Example/assets/48385389/183f8172-9757-4e59-ada1-a728c29fc550)
 <br/><br/><br/>
 
