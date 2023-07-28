@@ -1,0 +1,70 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="whack_a_mole, game, DOM, asynchronous" />
+    <meta name="description" content="whack a mole game" />
+
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <script defer src="./index.js"></script>
+
+    <title>whack-a-mole</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="title">whack-a-mole!</h1>
+    </div>
+    <div class="main">
+      <div class="scoreModal">
+        <span> YOUR SCORE</span>
+        <p></p>
+        <button class="closeButton">CLOSE</button>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td class="hole_1">
+              <img src="/img/mole.png" alt="두더지 이미지 1" />
+            </td>
+            <td class="hole_2">
+              <img src="/img/mole.png" alt="두더지 이미지 2" />
+            </td>
+            <td class="hole_3">
+              <img src="/img/mole.png" alt="두더지 이미지 3" />
+            </td>
+          </tr>
+          <tr>
+            <td class="hole_4">
+              <img src="/img/mole.png" alt="두더지 이미지 4" />
+            </td>
+            <td class="hole_5">
+              <img src="/img/mole.png" alt="두더지 이미지 5" />
+            </td>
+            <td class="hole_6">
+              <img src="/img/mole.png" alt="두더지 이미지 6" />
+            </td>
+          </tr>
+          <tr>
+            <td class="hole_7">
+              <img src="/img/mole.png" alt="두더지 이미지 7" />
+            </td>
+            <td class="hole_8">
+              <img src="/img/mole.png" alt="두더지 이미지 8" />
+            </td>
+            <td class="hole_9">
+              <img src="/img/mole.png" alt="두더지 이미지 9" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="footer">
+      <h1 class="point">SCORE : <span class="currentPoint">0</span> / 10</h1>
+      <button class="start">PRESS START</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "retro";
+  src: url(./DungGeunMo.ttf);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+}
+
+body h1,
+button,
+span,
+p {
+  font-family: "retro";
+}
+
+.header {
+  margin: 30px;
+}
+
+.header > .title {
+  font-size: 80px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.main {
+  position: relative;
+  margin: 30px;
+  padding: 30px;
+  background-color: #40a940;
+  border-radius: 20px;
+}
+
+.main > table td {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  background-image: url(./img/dirt.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.main > table td > img {
+  width: inherit;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  display: none;
+}
+
+.main > table td > img.show {
+  width: inherit;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  display: block;
+}
+
+.main > .scoreModal {
+  position: absolute;
+  left: 15%;
+  top: 25%;
+  display: none;
+  width: 70%;
+  height: 50%;
+  background-color: #666;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: "retro";
+  border-radius: 20px;
+}
+
+.main > .scoreModal > span {
+  text-align: center;
+}
+
+.main > .scoreModal > p {
+  font-size: 150px;
+  margin-bottom: 20px;
+  color: #ffb400;
+}
+
+.main > .scoreModal button {
+  font-size: 30px;
+  color: white;
+  background-color: #333;
+  width: 200px;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.main > .scoreModal button:hover {
+  color: #ffb400;
+  background-color: #464646;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  background-color: #666;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.footer h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.footer h1 > span {
+  color: #ffb400;
+  font-size: 70px;
+}
+
+.footer button {
+  font-size: 30px;
+  width: 250px;
+  height: 70px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  color: #ffb400;
+  background-color: #333;
+  transition: 0.3s;
+  pointer-events: auto;
+}
+
+.footer button:hover {
+  background-color: #464646;
+  color: white;
+}
