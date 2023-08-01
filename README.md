@@ -31,16 +31,16 @@ vanilla JS로 구현한 두더지잡기 게임 입니다.
 <br/><br/><br/>
 
 # 4. 어려웠던 점
-### 이벤트 핸들러 함수에 event객체 말도 다른 데이터는 argument로 보낼수는 없을까?<br/>
+### 이벤트 핸들러 함수에 event객체 말고 다른 인자를 이벤트 핸들러로 보낼수는 없을까?<br/>
 `addEventListener`를 사용할때 이벤트 핸들러 함수에 `event객체`와, `moleEls[randomNum]`을 인자로 넘기고 싶어서<br/>
-빈 익명 함수의 콜백함수로 이벤트 핸들러 함수를 넣어주었던 것이 문제의 시작이었음.
+빈 익명 함수의 콜백함수로 이벤트 핸들러 함수를 넣어주었던 것이 문제의 시작이었습니다.
 ```javascript
 tableEl.addEventListener("click", (event) => {
     catchMole(event, moleEls[randomNum])
 });
 ```
 이렇게 작성을 했더니, 제가 원하던대로 작동을 하지 않았습니다.<br/>
-이렇게 작성을 하게 되면 JS 파일을 읽어내려가는 순간 익명 화살표함수가 실행되기 때문 이었습니다.<br/>
+`moleEls[randomNum]`이 클릭때마다 최신화가 되지 않았습니다. 또한 클릭시 한번만 실행되어야 하는 핸들러가 3번씩 진행이 되었습니다.<br/>
 그래서<br/>
 **_어떻게 하면 `event객체`말고 다른 argument(`moleEls[randomNum]`)를 `Event Handler`에 넘길 수 있을까?_** 를 고민했습니다.<br/>
 <br/>
